@@ -156,54 +156,7 @@ public class DinaMail implements Serializable {
             Transport transport = session.getTransport();
             transport.connect(SMTP_HOST_NAME, SMTP_HOST_PORT, SMTP_AUTH_USER, SMTP_AUTH_PWD);
             transport.sendMessage(message, toaddress);
-            transport.close();
-
-//            InternetHeaders headers = new InternetHeaders();
-//            headers.addHeader("content-disposition", "form-data; name=\"field1\"");
-//             
-//            message = new MimeMessage(session); 
-// 
-//            message.setSubject(EMIL_SUBJECT); 
-//            message.addRecipient(Message.RecipientType.TO, new InternetAddress(address)); 
-//            message.setFrom(new InternetAddress(SMTP_AUTH_USER));
-// 
-//            
-//            
-//            //construct the text body part  
-////            BodyPart textBodyPart = new MimeBodyPart();
-////            textBodyPart.setText(BODY_CONTENT, "text/html; charset=ISO-8859-1"); 
-//            
-//            MimeBodyPart textBodyPart = new MimeBodyPart(headers, "Joe Blow".getBytes()); 
-//            textBodyPart.setText(BODY_CONTENT, "utf-8");
-// 
-//
-//            //now write the PDF content to the output stream
-////            outputStream = new ByteArrayOutputStream();
-////            writePdf(outputStream, overDueLoans);
-////            byte[] bytes = outputStream.toByteArray();
-////            
-////             
-////            //construct the pdf body part
-////            DataSource dataSource = new ByteArrayDataSource(bytes, APP_PDF);
-////            MimeBodyPart pdfBodyPart = new MimeBodyPart();
-////            pdfBodyPart.setDataHandler(new DataHandler(dataSource));
-////            pdfBodyPart.setFileName(ATT_FILE_NAME);
-//            
-//            //construct the mime multi part
-//            MimeMultipart mimeMultipart = new MimeMultipart();
-//            mimeMultipart.addBodyPart(textBodyPart);
-////            mimeMultipart.addBodyPart(pdfBodyPart);
-////  
-//     
-//            message.setContent(mimeMultipart);  
-//            InternetAddress[] toaddress = new InternetAddress[]{new InternetAddress(address)};
-//       
-//            
-//            
-//            Transport transport = session.getTransport();
-//            transport.connect(SMTP_HOST_NAME, SMTP_HOST_PORT, SMTP_AUTH_USER, SMTP_AUTH_PWD);
-//            transport.sendMessage(message, toaddress);
-//            transport.close(); 
+            transport.close(); 
         } catch (Exception ex) {
             logger.error(ex.getMessage());
         } finally {

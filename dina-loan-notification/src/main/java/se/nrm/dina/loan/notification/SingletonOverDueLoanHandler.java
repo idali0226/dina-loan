@@ -33,8 +33,8 @@ public class SingletonOverDueLoanHandler {
 //       getOverDueLoans();
 //    }
      
-//    @Schedule(dayOfMonth = "1", hour = "2")                 // Schedule first day of month at 2:00 am
-    @Schedule(hour = "12", minute = "20")
+    @Schedule(dayOfMonth = "1", hour = "2")                 // Schedule first day of month at 2:00 am
+//    @Schedule(hour = "12", minute = "20")
     public void getOverDueLoans() {
         logger.info("getOverDueLoans");
         
