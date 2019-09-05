@@ -1,0 +1,6 @@
+/dina-loan-notification/target/
+/dina-loan-notification-ear/target/
+/dina-datamodel/target/
+dina-loan-notification-ear/src/main/application/META-INF/jboss-app.xml
+dina-loan-notification/nb-configuration.xml
+dina-loan-notification-ear/nb-configuration.xml
